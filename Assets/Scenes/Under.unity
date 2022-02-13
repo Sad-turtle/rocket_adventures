@@ -271,7 +271,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1001 &858869835
 PrefabInstance:
@@ -280,14 +280,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 858869837, guid: d8094e2c26d0a0447a0cc3e138c1f79b, type: 3}
-      propertyPath: m_Drag
-      value: 0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 858869837, guid: d8094e2c26d0a0447a0cc3e138c1f79b, type: 3}
-      propertyPath: m_Constraints
-      value: 56
-      objectReference: {fileID: 0}
     - target: {fileID: 2857801520650897988, guid: d8094e2c26d0a0447a0cc3e138c1f79b, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -428,10 +420,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3072080640111116277, guid: 402efbaa1fb07fe4190444055ddfeb96, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: bedeca46c46e0e445a791bbad054bf4d, type: 2}
     - target: {fileID: 5766960148665261324, guid: 402efbaa1fb07fe4190444055ddfeb96, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -548,23 +536,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3865728972609601138, guid: 28633d687733f2443a6f26e6fc4f0200, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3865728972609601138, guid: 28633d687733f2443a6f26e6fc4f0200, type: 3}
       propertyPath: m_LocalScale.x
-      value: 3.11
+      value: 15.432752
       objectReference: {fileID: 0}
     - target: {fileID: 3865728972609601138, guid: 28633d687733f2443a6f26e6fc4f0200, type: 3}
       propertyPath: m_LocalScale.y
-      value: 2.0651002
+      value: 6.2518845
       objectReference: {fileID: 0}
     - target: {fileID: 3865728972609601138, guid: 28633d687733f2443a6f26e6fc4f0200, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.96
+      value: -8.33
       objectReference: {fileID: 0}
     - target: {fileID: 3865728972609601138, guid: 28633d687733f2443a6f26e6fc4f0200, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.6
+      value: 14.71
       objectReference: {fileID: 0}
     - target: {fileID: 3865728972609601138, guid: 28633d687733f2443a6f26e6fc4f0200, type: 3}
       propertyPath: m_LocalPosition.z
@@ -598,10 +586,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4769455010713961226, guid: 28633d687733f2443a6f26e6fc4f0200, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: fdefe055beb2ada49ad0bb5e46790642, type: 2}
     - target: {fileID: 8665479023428273677, guid: 28633d687733f2443a6f26e6fc4f0200, type: 3}
       propertyPath: m_Name
       value: Obstackle
