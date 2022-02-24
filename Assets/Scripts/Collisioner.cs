@@ -7,10 +7,15 @@ public class Collisioner : MonoBehaviour
     [SerializeField] float delayTime = 1f;
     [SerializeField] AudioClip levelFinish;
     [SerializeField] AudioClip crush;
+    [SerializeField] ParticleSystem successParticles;
+    [SerializeField] ParticleSystem crushParticles;
+
+
 
     AudioSource RocketAudio;
 
     bool isTransitioning = false;
+    bool collisionDisabled = false;
 
     private void Start()
     {
@@ -19,7 +24,7 @@ public class Collisioner : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(isTransitioning) { return; }
+        if(isTransitioning || collisionDisabled) { return; }
         switch(collision.gameObject.tag)
         {
             case "Friendly":
@@ -36,12 +41,30 @@ public class Collisioner : MonoBehaviour
                 break;
         }
     }
+    private void Update()
+    {
+        CheatKeys();
+    }
+
+    private void CheatKeys()
+    {
+        if (Input.GetKey(KeyCode.L))
+        {
+            LoadNextLevel();
+        }
+
+        else if (Input.GetKey(KeyCode.C))
+        {
+            collisionDisabled = !collisionDisabled;
+        }
+    }
 
     void StartCrushSequence()
     {
         isTransitioning = true;
         GetComponent<Movement>().enabled = false;
         RocketAudio.PlayOneShot(crush);
+        crushParticles.Play();
         Invoke("ReloadLevel",delayTime);
     }
     void StartSuccessSequence()
@@ -49,6 +72,7 @@ public class Collisioner : MonoBehaviour
         isTransitioning = true;
         GetComponent<Movement>().enabled = false;
         RocketAudio.PlayOneShot(levelFinish);
+        successParticles.Play();
         Invoke("LoadNextLevel", delayTime);
     }
     void ReloadLevel()
